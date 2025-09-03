@@ -1,774 +1,203 @@
-.screen {
-  background-color: #ffffff;
+@font-face {
+  font-family: "OPPOSans-Medium";
+  src: url("fonts/OPPOSans-Medium.woff2") format("woff2"),
+       url("fonts/OPPOSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* 全局样式 */
+:root {
+  --primary-color: #0363ef;
+  --text-color: #2d2d2d;
+  --muted-color: #6f6f6f;
+  --bg-light: #f9f9f9;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "OPPOSans-Regular", Helvetica, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "OPPOSans-Medium", Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 容器 */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+}
+
+/* 导航栏 */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* 横幅 */
+.hero {
+  background: url("ILABY WEB 素材\\首页页面\\首页理念图.png") no-repeat center;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero h1 {
+  max-width: 800px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* 区块 */
+.section {
+  margin: 4rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+}
+
+.more {
+  color: var(--muted-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.more:hover {
+  color: var(--primary-color);
+}
+
+.grid {
   display: grid;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   align-items: start;
-  width: 100vw;
 }
 
-.screen .div {
-  background-color: #ffffff;
-  overflow-x: hidden;
-  width: 1920px;
-  height: 3868px;
-  position: relative;
-}
 
-.screen .text-wrapper {
-  position: absolute;
-  width: 315px;
-  top: 3090px;
-  left: 120px;
-  font-family: "OPPOSans-Heavy", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 24px;
-  letter-spacing: 2.40px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-2 {
-  position: absolute;
-  width: 315px;
-  top: 1587px;
-  left: 120px;
-  font-family: "OPPOSans-Heavy", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 24px;
-  letter-spacing: 2.40px;
-  line-height: normal;
-}
-
-.screen .overlap {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 2521px;
-  left: 120px;
-}
-
-.screen .text-wrapper-3 {
-  position: absolute;
-  width: 547px;
-  top: 171px;
-  left: 0;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 1.60px;
-  line-height: normal;
-}
-
-.screen .element {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 550px;
-  height: 364px;
-}
-
-.screen .text-wrapper-4 {
-  top: 2914px;
-  left: 684px;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-5 {
-  top: 3566px;
-  left: 685px;
-  color: #6f6f6f;
-  font-size: 16px;
-  line-height: normal;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .copyright-ilaby {
-  position: absolute;
-  width: 547px;
-  top: 3758px;
-  left: 685px;
-  font-family: "OPPOSans-Regular", Helvetica;
-  font-weight: 400;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.screen .e-mail-xxxxx-zju-edu {
-  position: absolute;
-  width: 547px;
-  top: 3762px;
-  left: 1250px;
-  font-family: "OPPOSans-Regular", Helvetica;
-  font-weight: 400;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.screen .text-wrapper-6 {
-  top: 2914px;
-  left: 119px;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-7 {
-  top: 3566px;
-  left: 119px;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-8 {
-  top: 2914px;
-  left: 1250px;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-9 {
-  top: 3566px;
-  left: 1250px;
-  color: #6f6f6f;
-  font-size: 16px;
-  line-height: normal;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .element-2 {
-  position: absolute;
-  width: 547px;
-  top: 2946px;
-  left: 120px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-}
-
-.screen .text-wrapper-10 {
-  top: 3598px;
-  left: 120px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .text-wrapper-11 {
-  top: 2946px;
-  left: 684px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .text-wrapper-12 {
-  position: absolute;
-  width: 547px;
-  top: 3598px;
-  left: 685px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 28px;
-  text-decoration: underline;
-}
-
-.screen .text-wrapper-13 {
-  top: 2946px;
-  left: 1250px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .text-wrapper-14 {
-  top: 3598px;
-  left: 1250px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 28px;
-  text-decoration: underline;
-  white-space: nowrap;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .text-wrapper-15 {
-  width: 140px;
-  top: 3093px;
-  left: 1628px;
-  position: absolute;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 20px;
-  text-align: right;
-  letter-spacing: 2.00px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-16 {
-  width: 136px;
-  top: 1590px;
-  left: 1632px;
-  position: absolute;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 20px;
-  text-align: right;
-  letter-spacing: 2.00px;
-  line-height: normal;
-}
-
-.screen .line {
-  top: 3140px;
-  left: 120px;
-  position: absolute;
-  width: 1680px;
-  height: 1px;
-  object-fit: cover;
-}
-
-.screen .img {
-  top: 3722px;
-  left: 120px;
-  position: absolute;
-  width: 1680px;
-  height: 1px;
-  object-fit: cover;
-}
-
-.screen .line-2 {
-  top: 1637px;
-  left: 120px;
-  position: absolute;
-  width: 1680px;
-  height: 1px;
-  object-fit: cover;
-}
-
-.screen .vector {
-  position: absolute;
-  width: 11px;
-  height: 20px;
-  top: 3108px;
-  left: 1787px;
-}
-
-.screen .vector-2 {
-  position: absolute;
-  width: 11px;
-  height: 20px;
-  top: 1596px;
-  left: 1787px;
-}
-
-.screen .overlap-group {
-  position: absolute;
-  width: 1680px;
-  height: 840px;
-  top: 1670px;
-  left: 120px;
-  background-color: #e0ecff;
+.grid article {
+  background: var(--bg-light);
   border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s;
 }
 
-.screen .element-3 {
-  position: absolute;
-  width: 1057px;
-  height: 594px;
-  top: 40px;
-  left: 56px;
+.grid article:hover {
+  transform: translateY(-5px);
 }
 
-.screen .element-shanghai {
-  position: absolute;
-  width: 1005px;
-  top: 693px;
-  left: 108px;
-  opacity: 0.8;
-  font-family: "OPPOSans-Heavy", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+.grid h3 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
-.screen .teaching-practice-of {
-  position: absolute;
-  width: 371px;
-  top: 718px;
-  left: 1133px;
-  opacity: 0.8;
-  font-family: "OPPOSans-Heavy", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  text-align: right;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .vector-3 {
-  position: absolute;
-  width: 27px;
-  height: 87px;
-  top: 684px;
-  left: 56px;
-}
-
-.screen .element-4 {
-  position: absolute;
-  width: 491px;
-  height: 594px;
-  top: 40px;
-  left: 1133px;
-}
-
-.screen .polygon-wrapper {
-  left: 1574px;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 720px;
-  background-color: #0363ef;
-}
-
-.screen .polygon {
-  left: 16px;
-  position: absolute;
-  width: 21px;
-  height: 24px;
-  top: 13px;
-}
-
-.screen .img-wrapper {
-  left: 1518px;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 720px;
-  background-color: #0363ef;
-}
-
-.screen .polygon-2 {
-  left: 12px;
-  position: absolute;
-  width: 21px;
-  height: 24px;
-  top: 13px;
-}
-
-.screen .element-5 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 2521px;
-  left: 685px;
-}
-
-.screen .element-6 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 3173px;
-  left: 685px;
-}
-
-.screen .group {
-  position: absolute;
-  width: 1696px;
-  height: 532px;
-  top: 936px;
-  left: 120px;
-}
-
-.screen .text-wrapper-17 {
-  position: absolute;
-  width: 315px;
-  top: 0;
-  left: 0;
-  font-family: "OPPOSans-Heavy", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 24px;
-  letter-spacing: 2.40px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-18 {
-  position: absolute;
-  width: 547px;
-  top: 476px;
-  left: 0;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-19 {
-  top: 476px;
-  left: 565px;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-20 {
-  position: absolute;
-  width: 547px;
-  top: 476px;
-  left: 1130px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .educational {
-  position: absolute;
-  width: 547px;
-  top: 508px;
-  left: 0;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-}
-
-.screen .text-wrapper-21 {
-  top: 508px;
-  left: 565px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  position: absolute;
-  width: 547px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.screen .text-wrapper-22 {
-  position: absolute;
-  width: 547px;
-  top: 508px;
-  left: 1130px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-}
-
-.screen .text-wrapper-23 {
-  width: 138px;
+.grid time,
+.grid p {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  margin-top: 1rem;
+  line-height: 2;
+  position: relative;
   top: 3px;
-  left: 1510px;
-  position: absolute;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #6f6f6f;
-  font-size: 20px;
-  text-align: right;
-  letter-spacing: 2.00px;
-  line-height: normal;
 }
 
-.screen .line-3 {
-  top: 49px;
-  left: 0;
-  position: absolute;
-  width: 1680px;
-  height: 1px;
-  object-fit: cover;
+/* 页脚 */
+.footer {
+  background: #f1f1f1;
+  padding: 2rem 0;
+  margin-top: 4rem;
 }
 
-.screen .vector-4 {
-  position: absolute;
-  width: 11px;
-  height: 20px;
-  top: 6px;
-  left: 1667px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;
 }
 
-.screen .element-7 {
-  top: 82px;
-  left: 1130px;
-  position: absolute;
-  width: 550px;
-  height: 364px;
+.footer-images {
+  display: flex;
+  gap: 1rem;          
+  align-items: center;  
 }
 
-.screen .element-8 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 82px;
-  left: 0;
+.footer-logo {
+  height: 60px;
+  margin-top: 0.5rem;  
 }
 
-.screen .element-9 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 82px;
-  left: 565px;
+.qrcode {
+  width: 60px;
+  margin-top: 0.5rem;  
+  margin-left: 0;      
 }
 
-.screen .element-10 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 2521px;
-  left: 1250px;
-}
-
-.screen .element-11 {
-  top: 3173px;
-  left: 1250px;
-  position: absolute;
-  width: 550px;
-  height: 364px;
-}
-
-.screen .ILABY-logo-web {
-  position: absolute;
-  width: 154px;
-  height: 71px;
-  top: 3758px;
-  left: 120px;
-}
-
-.screen .qrcode-for-gh {
-  position: absolute;
-  width: 82px;
-  height: 82px;
-  top: 3753px;
-  left: 307px;
-}
-
-.screen .element-12 {
-  position: absolute;
-  width: 550px;
-  height: 364px;
-  top: 3173px;
-  left: 120px;
-}
-
-.screen .view {
-  width: 1924px;
-  height: 772px;
-  top: 84px;
-  position: absolute;
-  left: 0;
-}
-
-.screen .overlap-group-2 {
-  position: relative;
-  width: 1920px;
-  height: 772px;
-  background-image: url(https://c.animaapp.com/mf3vowm0rHSdGz/img/rectangle-14.png);
-  background-size: 100% 100%;
-}
-
-.screen .image {
-  position: absolute;
-  width: 1352px;
-  height: 177px;
-  top: 191px;
-  left: 282px;
-}
-
-.screen .philosophy {
-  position: absolute;
-  width: 1341px;
-  height: 71px;
-  top: 455px;
-  left: 289px;
-}
-
-.screen .vector-5 {
-  position: absolute;
-  width: 66px;
-  height: 49px;
-  top: 607px;
-  left: 927px;
-}
-
-.screen .navbar-wrapper {
-  width: 1930px;
-  height: 84px;
-  top: 0;
-  position: absolute;
-  left: 0;
-}
-
-.screen .navbar {
-  position: relative;
-  width: 1920px;
-  height: 84px;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 16px #0000000d;
-}
-
-.screen .ILABY-logo-web-2 {
-  position: absolute;
-  width: 98px;
-  height: 45px;
-  top: 19px;
-  left: 132px;
-}
-
-.screen .text-wrapper-24 {
-  width: 164px;
-  left: 1039px;
-  position: absolute;
-  top: 30px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #2d2d2d;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1.80px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-25 {
-  width: 122px;
-  left: 1265px;
-  position: absolute;
-  top: 30px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #2d2d2d;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1.80px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-26 {
-  width: 158px;
-  left: 1449px;
-  position: absolute;
-  top: 30px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #2d2d2d;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1.80px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-27 {
-  width: 132px;
-  left: 1669px;
-  position: absolute;
-  top: 30px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #2d2d2d;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1.80px;
-  line-height: normal;
-}
-
-.screen .text-wrapper-28 {
-  width: 170px;
-  left: 807px;
-  position: absolute;
-  top: 30px;
-  font-family: "OPPOSans-Medium", Helvetica;
-  font-weight: 500;
-  color: #2d2d2d;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1.80px;
-  line-height: normal;
+/* 响应式 */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .hero {
+    height: 250px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 }
