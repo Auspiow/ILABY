@@ -12,7 +12,6 @@
   --text-color: #2d2d2d;
   --muted-color: #6f6f6f;
   --bg-light: #f9f9f9;
-  --max-width: 1200px;
 }
 
 * {
@@ -92,12 +91,6 @@ img {
   padding: 2rem;
 }
 
-.hero h1 {
-  max-width: 800px;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 /* 区块 */
 .section {
   margin: 4rem 0;
@@ -108,6 +101,9 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  border-bottom: 1.5px solid #ccc;
+  padding-bottom: 0.5rem; 
 }
 
 .section-header h2 {
@@ -129,8 +125,12 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   align-items: start;
-}
 
+  width: 100%;
+  margin: 0;
+  max-width: none;
+  padding: 1rem;
+}
 
 .grid article {
   background: var(--bg-light);
@@ -141,6 +141,13 @@ img {
 
 .grid article:hover {
   transform: translateY(-5px);
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 
 .grid h3 {
@@ -158,6 +165,61 @@ img {
   top: 3px;
 }
 
+/* 新闻链接 */
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 整个容器 */
+.overlap-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  background-color: #e0ecff;
+  border-radius: 8px;
+  padding: 4rem;
+  align-items: center;
+  margin: 2rem auto;
+  width: 98%;
+  max-width: var(--max-width);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.overlap-group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+/* 左侧图片 */
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 右侧文字信息 */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.info h3 {
+  font-family: "OPPOSans-Heavy", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.info .subtitle {
+  font-family: "OPPOSans-Medium", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
 /* 页脚 */
 .footer {
   background: #f1f1f1;
@@ -199,5 +261,21 @@ img {
   }
   .hero h1 {
     font-size: 1.5rem;
+  }
+}
+
+/* 响应式：在小屏下改为上下结构 */
+@media (max-width: 1024px) {
+  .overlap-group {
+    grid-template-columns: 1fr; /* 改为上下结构 */
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
   }
 }
