@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "OPPOSans-Regular";
+  src: url("fonts/OPPOSans-Regular.woff2") format("woff2"),
+       url("fonts/OPPOSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #0363ef;
+  --text-color: #2d2d2d;
+  --muted-color: #6f6f6f;
+  --bg-light: #f9f9f9;
+  --border-color: #6f6f6f;
+  --card-bg: #f4f4f4;
+  --radius: 8px;
+  --spacing: 20px;
+  --max-width: 1200px;
+}
+
+/* 全局基础样式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "OPPOSans-Regular", Helvetica, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "OPPOSans-Medium", Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 容器 */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+}
+
+/* 导航栏 */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.nav-container {
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links a.active {
+  color: var(--primary-color);
+  font-weight: bold;    
+  pointer-events: none; 
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 2px;
+}
+
+.logo-link {
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+  height: 50px;
+  display: block;
+}
+
+/* 主要内容区域 */
+.main-content {
+    margin-top: 104px;
+    padding: 40px 0;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--muted-color);
+    margin-bottom: 40px;
+}
+
+/* 论文列表样式 */
+.papers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paper-item {
+  display: flex;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.paper-item:hover {
+  background: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-color: var(--primary-color);
+}
+
+.paper-icon {
+    width: 140px;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.paper-content {
+    flex: 1;
+}
+
+.paper-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.paper-authors {
+    font-size: 14px;
+    color: var(--muted-color);
+}
+
+/* 出版物样式 */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.publication-item {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    padding: 20px 28px;
+}
+.publication-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+}
+
+.publication-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 页脚 */
+.footer {
+  background: #f1f1f1;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;
+}
+
+.footer-images {
+  display: flex;
+  gap: 1rem;          
+  align-items: center;  
+}
+
+.footer-logo {
+  height: 60px;
+  margin-top: 0.5rem;  
+}
+
+.qrcode {
+  width: 60px;
+  margin-top: 0.5rem;  
+  margin-left: 0;      
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .overlap-group {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .paper-item {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .paper-icon {
+    margin: 0 0 15px 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .publication-item {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+}
