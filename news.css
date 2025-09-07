@@ -141,46 +141,25 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    border-bottom: 1.5px solid #ccc;
+    padding-bottom: 0.5rem; 
 }
 
-.section-title {
-    font-weight: 900;
-    font-size: 24px;
-    color: #000;
+.more {
+  color: var(--muted-color);
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.more-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: rgba(111, 111, 111, 1);
-    font-weight: 500;
-    font-size: 20px;
-    transition: color 0.3s;
+.more:hover {
+  color: var(--primary-color);
 }
 
-.more-link:hover {
-    color: rgba(3, 99, 239, 1);
-}
-
-.arrow {
-    width: 11px;
-    height: 19px;
-    background: rgba(111, 111, 111, 1);
-    margin-left: 10px;
-    transition: background 0.3s;
-}
-
-.more-link:hover .arrow {
-    background: rgba(3, 99, 239, 1);
-}
-
-/* Competition Section */
 .competition-banner {
     width: 100%;
     height: 556px;
     background: #f0f0f0;
-    background-image: url("../images/competition-banner.png");
+    background-image: url("ILABY WEB 素材/新闻页面/未来教育设计大赛配图.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -189,36 +168,49 @@ img {
 
 /* News Section */
 .news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.news-image {
+  width: 100%;
+  height: 268px;
+  background: #f0f0f0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.news-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 60px;
-}
-
-.news-card {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.news-image {
-    width: 100%;
-    height: 268px;
-    background: #f0f0f0;
-    background-image: url("../images/news-placeholder.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-.news-info {
-    padding: 20px;
+    align-items: stretch;
 }
 
 .news-meta {
@@ -339,30 +331,10 @@ img {
     width: 100%;
     height: 100%;
     background: #f0f0f0;
-    background-image: url("../images/moment-placeholder.png");
+    background-image: url("ILABY WEB 素材/新闻页面/新闻-工作室时刻-敬请期待.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-}
-
-.moment-overlay {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 147px;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.moment-overlay h3 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    line-height: 1.4;
 }
 
 /* Footer */

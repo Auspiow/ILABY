@@ -122,32 +122,33 @@ img {
 .section-title {
     font-weight: 900;
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1.5px solid #ccc;
+    padding-bottom: 0.5rem; 
 }
 
 .activities-section,
 .teacher-training-section {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 /* Grid Layouts */
-.activities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
+.activities-grid,
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 12px;
+  column-gap: 12px;
 }
 
-.training-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.training-grid .big-card {
+  grid-column: 1 / -1;
+  display: grid;
 }
 
 /* Card Styles */
 .activity-card, .training-card {
-   position: relative; 
-   height: 268px; 
+   position: relative;
    border-radius: 8px; 
    overflow: hidden; 
 }
