@@ -113,13 +113,24 @@ img {
 }
 
 /* 主要内容区域 */
-.main-content {
-    margin-top: 104px;
-    padding: 40px 0;
+.main-content section {
+    padding: 80px 0;
 }
 
-.section {
-    margin-bottom: 60px;
+.contact-hero {
+    padding: 80px 0 40px;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: rgba(111, 111, 111, 1);
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .section-title {
@@ -217,6 +228,10 @@ img {
   background: #f1f1f1;
   padding: 2rem 0;
   margin-top: 4rem;
+  --max-width: 1200px;
+  font-size: 14px;
+  color: #707070;
+  line-height: 2;
 }
 
 .footer-grid {
